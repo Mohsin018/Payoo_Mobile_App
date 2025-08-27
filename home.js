@@ -48,6 +48,27 @@ document.getElementById('add-money-btn').addEventListener('click', function(e){
 })
 
 
+
+
+
+
+// Cashout money feature
+
+document.getElementById('withdraw-btn').addEventListener('click', function(e){
+    e.preventDefault();
+
+    const amount = parseInt(document.getElementById('withdraw-amount').value);
+
+    const availableBalance = parseInt(document.getElementById('available-balance').innerText);
+
+    const totalnewavailableBalance = availableBalance - amount;
+
+    document.getElementById('available-balance').innerText = totalnewavailableBalance;
+
+})
+
+
+
 // Toggle feature od add money and cash out
 document.getElementById('add-button').addEventListener('click', function(){
     document.getElementById('cash-out-parent').style.display = "none"
